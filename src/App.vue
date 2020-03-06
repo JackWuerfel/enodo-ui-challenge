@@ -1,6 +1,11 @@
 <template>
     <div id="app">
-        <NavBar :userInitials="userInitials" :menuItems="menuItems" />
+        <NavBar
+            :avatar="avatar"
+            :userInitials="userInitials"
+            :menuItems="menuItems"
+            :remainingProperties="remainingProperties"
+        />
         <SecondNavBar :property="property" />
         <b-container class="my-5 px-2 px-md-5 mx-auto max-w-1440px" fluid>
             <b-row>
@@ -52,7 +57,11 @@ export default class App extends Vue {
     private avatar: bool = {
         hasImg: true
     };
+
+    private remainingProperties: string = '2';
+
     private userInitials: string = 'AP';
+
     private menuItems: object[] = [
         { name: 'Property Analysis', active: true },
         { name: 'Rent Roll Analyzer', active: false },
