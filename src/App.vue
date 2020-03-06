@@ -2,7 +2,7 @@
     <div id="app">
         <NavBar :userInitials="userInitials" :menuItems="menuItems" />
         <SecondNavBar :property="property" />
-        <b-container class="my-5 px-5 mx-auto max-w-1440px" fluid>
+        <b-container class="my-5 px-2 px-md-5 mx-auto max-w-1440px" fluid>
             <b-row>
                 <b-col md="5" lg="4" xl="3">
                     <PropertySummary :property="property" />

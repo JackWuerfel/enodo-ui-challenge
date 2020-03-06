@@ -75,11 +75,11 @@ export default class PropertySummary extends Vue {
     private property!: object;
 
     private propertySections: object[] = [
-        { name: 'Comparables', selected: false },
-        { name: 'Operating Expenses', selected: true },
-        { name: 'Rent roll / Unit Mix', selected: false },
-        { name: 'Amenities', selected: false },
-        { name: 'Market', selected: false }
+        { name: 'Comparables', selected: false, icon: 'columns-gutters' },
+        { name: 'Operating Expenses', selected: true, icon: 'wallet' },
+        { name: 'Rent roll / Unit Mix', selected: false, icon: 'building' },
+        { name: 'Amenities', selected: false, icon: 'star-fill' },
+        { name: 'Market', selected: false, icon: 'geo' }
     ];
 }
 </script>

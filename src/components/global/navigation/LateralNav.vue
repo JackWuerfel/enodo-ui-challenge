@@ -1,11 +1,13 @@
 <template>
-    <div>
+    <div class="mb-3">
         <div
             v-for="(value, x) in options"
             :key="x"
-            :class="value.selected ? 'selected' : ''"
+            :class="
+                'my-2 py-2 d-flex text-left w-100 pointer text-success align-items-center f-s-18px'
+            "
         >
-            {{ value.name }}
+            <b-icon :icon="value.icon" class="mr-3"></b-icon>{{ value.name }}
         </div>
     </div>
 </template>
@@ -21,4 +23,11 @@ export default class LateralNav extends Vue {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.pointer {
+    cursor: pointer !important;
+}
+.f-s-18px {
+    font-size: 18px;
+}
+</style>

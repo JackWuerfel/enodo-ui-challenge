@@ -83,7 +83,7 @@
 
                     <b-dropdown-item
                         href="https://app.enodoinc.com/dashboard/home"
-                        >Go Olds Platform</b-dropdown-item
+                        >Go to Old Platform</b-dropdown-item
                     >
                     <b-dropdown-item href="#">Account</b-dropdown-item>
                     <b-dropdown-item href="#">Sign Out</b-dropdown-item>

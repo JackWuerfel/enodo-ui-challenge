@@ -2,7 +2,8 @@
     <b-container class="py-3 border-bottom bg-white" fluid>
         <b-row>
             <b-col
-                sm="6"
+                xs="12"
+                sm="8"
                 lg="10"
                 class="d-flex flex-row align-items-center justity-content-start"
             >
@@ -21,9 +22,9 @@
                     }}
                 </p>
             </b-col>
-            <b-col sm="6" lg="2">
+            <b-col xs="12" sm="4" lg="2">
                 <div
-                    class="d-flex flex-row align-items-center justify-content-center"
+                    class="d-flex flex-row align-items-center justify-content-center mt-3 mt-md-0"
                 >
                     <b-button variant="outline-success" class="mx-2"
                         >Share</b-button
