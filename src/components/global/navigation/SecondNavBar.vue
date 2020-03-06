@@ -24,7 +24,7 @@
             </b-col>
             <b-col xs="12" sm="4" lg="2">
                 <div
-                    class="d-flex flex-row align-items-center justify-content-center mt-3 mt-md-0"
+                    class="d-flex flex-row align-items-center justify-content-center mt-4 mt-md-0"
                 >
                     <b-button variant="outline-success" v-b-modal.modal-2>
                         <span class="mx-2">Share</span></b-button
