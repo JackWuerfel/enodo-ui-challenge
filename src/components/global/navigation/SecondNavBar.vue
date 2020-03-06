@@ -26,10 +26,19 @@
                 <div
                     class="d-flex flex-row align-items-center justify-content-center mt-3 mt-md-0"
                 >
-                    <b-button variant="outline-success" class="mx-2"
-                        >Share</b-button
+                    <b-button variant="outline-success" v-b-modal.modal-2>
+                        <span class="mx-2">Share</span></b-button
                     >
-                    <b-button variant="success" class="mx-2">Export</b-button>
+                    <b-modal id="modal-2" title="Share" hide-footer>
+                        <p>Share</p>
+                    </b-modal>
+
+                    <b-button variant="success" class="mx-2" v-b-modal.modal-3>
+                        <span class="mx-2">Export</span></b-button
+                    >
+                    <b-modal id="modal-3" title="Export" hide-footer>
+                        <p>Export</p>
+                    </b-modal>
                 </div>
             </b-col>
         </b-row>

@@ -12,10 +12,10 @@
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav>
-            <b-navbar-nav>
+            <b-navbar-nav class="pt-5 pt-md-0">
                 <b-button v-b-modal.modal-1>
                     <b-icon icon="search"></b-icon
-                    ><span class="mx-2">search</span></b-button
+                    ><span class="mx-2">Search</span></b-button
                 >
                 <b-modal id="modal-1" title="Search" hide-footer>
                     <b-form-input
@@ -64,7 +64,9 @@
             </b-navbar-nav>
 
             <!-- Right aligned nav items -->
-            <b-navbar-nav class="ml-auto d-flex align-items-center">
+            <b-navbar-nav
+                class="ml-auto d-flex align-items-center pb-5 pb-md-0"
+            >
                 <b-nav-item-dropdown
                     toggle-class="d-flex align-items-center mx-2 text-white"
                     right
