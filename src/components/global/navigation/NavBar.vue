@@ -13,27 +13,24 @@
 
         <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav>
-                <b-nav-item-dropdown
-                    text="Search"
-                    toggle-class="d-flex align-items-center mx-2 text-white"
-                    right
+                <b-button v-b-modal.modal-1>
+                    <b-icon icon="search"></b-icon
+                    ><span class="mx-2">search</span></b-button
                 >
-                    <b-dropdown-item href="#">
-                        <b-nav-form>
-                            <b-form-input
-                                size="sm"
-                                class="mr-sm-2"
-                                placeholder="Search"
-                            ></b-form-input>
-                            <b-button
-                                size="sm"
-                                class="my-2 my-sm-0"
-                                type="submit"
-                                >Search</b-button
-                            >
-                        </b-nav-form></b-dropdown-item
+                <b-modal id="modal-1" title="Search" hide-footer>
+                    <b-form-input
+                        size="sm"
+                        class="mb-2"
+                        placeholder="Search"
+                    ></b-form-input>
+                    <b-button
+                        size="sm"
+                        class="my-2 my-sm-0 w-100"
+                        type="submit"
                     >
-                </b-nav-item-dropdown>
+                        Search</b-button
+                    >
+                </b-modal>
 
                 <b-nav-item-dropdown
                     text="Lang"
@@ -114,5 +111,8 @@ export default class NavBar extends Vue {
 .user-circle {
     width: 35px;
     height: 35px;
+}
+.bg-primary {
+    background-color: #37474f !important;
 }
 </style>
