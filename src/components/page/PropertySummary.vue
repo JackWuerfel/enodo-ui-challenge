@@ -55,9 +55,8 @@
                 >
             </p>
             <hr />
-
-            <LateralNav :options="propertySections" />
         </div>
+        <LateralNav :options="propertySections" />
     </b-card>
 </template>
 
