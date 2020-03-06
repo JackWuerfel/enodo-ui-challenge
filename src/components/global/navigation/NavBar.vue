@@ -74,10 +74,18 @@
                     <!-- Using 'button-content' slot -->
 
                     <template v-slot:button-content>
-                        <span
-                            class="d-flex font-weight-bold bg-secondary rounded-circle user-circle align-items-center justify-content-center mr-1"
-                            >{{ userInitials }}</span
-                        >
+                        <div v-show:avatar.hasImg="true">
+                            <img
+                                src="../../../assets/avatar.jpg"
+                                class="rounded-circle user-circle"
+                            />
+                        </div>
+                        <div v-show:avatar.hasImg="false">
+                            <span
+                                class="d-flex font-weight-bold bg-secondary rounded-circle user-circle align-items-center justify-content-center mr-1"
+                                >{{ userInitials }}</span
+                            >
+                        </div>
                     </template>
 
                     <b-dropdown-item
@@ -97,6 +105,9 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class NavBar extends Vue {
+    @Prop()
+    private avatar!: bool;
+
     @Prop()
     private userInitials!: string;
 

@@ -49,6 +49,9 @@ import OperatingExpensesCard from './components/page/OperatingExpensesCard.vue';
     }
 })
 export default class App extends Vue {
+    private avatar: bool = {
+        hasImg: true
+    };
     private userInitials: string = 'AP';
     private menuItems: object[] = [
         { name: 'Property Analysis', active: true },
