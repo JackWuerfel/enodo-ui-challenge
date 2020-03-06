@@ -54,7 +54,7 @@ import OperatingExpensesCard from './components/page/OperatingExpensesCard.vue';
     }
 })
 export default class App extends Vue {
-    private avatar: bool = {
+    private avatar: boolean = {
         hasImg: true
     };
 
