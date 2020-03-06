@@ -1,5 +1,5 @@
 <template>
-    <b-card title="Historical Operating Expenses" tag="chart" class="mb-2 p-0">
+    <b-card title="Historical Operating Expenses" class="mb-2 p-0">
         <b-card-text class="w-100">
             <div class="table-responsive">
                 <table class="table table-striped">
@@ -29,7 +29,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
-export default class NavBar extends Vue {
+export default class HistoricalOperatingExpenses extends Vue {
     @Prop()
     private headers!: string[];
 

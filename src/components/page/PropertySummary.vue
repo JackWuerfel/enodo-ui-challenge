@@ -3,7 +3,6 @@
         img-src="https://maps.googleapis.com/maps/api/streetview?size=400x200&pitch=10&fov=180&location=320%20N%20Canal%20St,%20Chicago,%20IL%2060606&key=AIzaSyApsGVNO-Ms2sIJM4PtmwC5VfeutsZSExo"
         img-alt="Image"
         img-top
-        tag="property"
         class="w-100 text-left"
         no-body
     >
@@ -71,7 +70,7 @@ import LateralNav from '../global/navigation/LateralNav.vue';
         LateralNav
     }
 })
-export default class NavBar extends Vue {
+export default class PropertySummary extends Vue {
     @Prop()
     private property!: object;
 

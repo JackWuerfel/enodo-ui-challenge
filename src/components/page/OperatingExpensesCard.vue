@@ -1,7 +1,6 @@
 <template>
     <b-card
         title="Operating Expenses"
-        tag="chart"
         class="mb-2 h-100 d-flex align-items-center"
     >
         <b-card-text>
@@ -24,7 +23,7 @@ import ChartPie from '../global/charts/ChartPie.vue';
         ChartPie
     }
 })
-export default class NavBar extends Vue {
+export default class OperatingExpensesCard extends Vue {
     private loaded = false;
 
     private chartData = {

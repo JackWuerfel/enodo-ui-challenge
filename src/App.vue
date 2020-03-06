@@ -2,7 +2,7 @@
     <div id="app">
         <NavBar :userInitials="userInitials" :menuItems="menuItems" />
         <SecondNavBar :property="property" />
-        <b-container class="my-5 px-5" fluid>
+        <b-container class="my-5 px-5 mx-auto max-w-1440px" fluid>
             <b-row>
                 <b-col md="5" lg="4" xl="3">
                     <PropertySummary :property="property" />
@@ -188,12 +188,17 @@ export default class App extends Vue {
 </script>
 
 <style lang="scss">
+body {
+    background-color: #fafafa !important;
+}
 #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    background: #fafafa;
+}
+.max-w-1440px {
+    max-width: 1440px;
 }
 </style>

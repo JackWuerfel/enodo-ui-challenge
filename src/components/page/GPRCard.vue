@@ -1,5 +1,5 @@
 <template>
-    <b-card title="Gross Potential Rent" tag="chart" class="mb-2 h-100">
+    <b-card title="Gross Potential Rent" class="mb-2 h-100">
         <b-card-text>
             <canvas v-show="gprChart" :id="grossPotentialRentID"></canvas>
         </b-card-text>
@@ -16,7 +16,7 @@ import Chart from 'chart.js';
         ChartPie
     }
 })
-export default class NavBar extends Vue {
+export default class GPRCard extends Vue {
     private loaded = false;
     private id = Math.random()
         .toString(36)
@@ -176,7 +176,7 @@ export default class NavBar extends Vue {
                                     beginAtZero: false,
                                     min: 1448095.5,
                                     autoSkip: true,
-                                    lineHeight: 2
+                                    lineHeight: 2.5
                                 }
                             }
                         ]

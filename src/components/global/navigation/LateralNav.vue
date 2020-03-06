@@ -14,7 +14,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
-export default class NavBar extends Vue {
+export default class LateralNav extends Vue {
     @Prop()
     private options!: object[];
 }
