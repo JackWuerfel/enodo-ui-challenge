@@ -198,7 +198,7 @@ export default class App extends Vue {
             isTotal: true
         }
     ];
-    private mode: string = localStorage.getItem('themeMode');
+    private mode = localStorage.getItem('themeMode');
     private mounted() {
         localStorage.setItem('themeMode', 'light');
     }
