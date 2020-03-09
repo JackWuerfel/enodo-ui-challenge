@@ -12,7 +12,7 @@
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav>
-            <b-navbar-nav class="pt-5 pt-lg-0">
+            <b-navbar-nav class="pt-5 pt-lg-0 align-items-center">
                 <b-button v-b-modal.modal-1>
                     <b-icon icon="search"></b-icon
                     ><span class="mx-2">Search</span></b-button
@@ -34,7 +34,7 @@
 
                 <b-nav-item-dropdown
                     text="Lang"
-                    toggle-class="d-flex align-items-center mx-2 text-white"
+                    toggle-class="d-flex align-items-center mx-2 my-2 text-white"
                     right
                 >
                     <template v-slot:button-content>
@@ -62,7 +62,7 @@
                     >
                 </b-nav-item-dropdown>
                 <div
-                    class="d-flex align-items-center justify-content-center text-white"
+                    class="align-items-center justify-content-center text-white d-none d-lg-flex"
                 >
                     <div class="mr-2">
                         <span class="text-capitalize pr-1">{{ mode }}</span>
@@ -73,8 +73,12 @@
             </b-navbar-nav>
 
             <!-- Right aligned nav items -->
-            <b-navbar-nav class="ml-auto d-flex align-items-center pb-md-0">
-                <span class="d-flex align-items-center text-white mx-2">
+            <b-navbar-nav
+                class="ml-auto d-flex align-items-center justify-content-center pb-md-0"
+            >
+                <span
+                    class="align-items-center text-white mx-2 d-none d-lg-flex"
+                >
                     <em>
                         <p class="m-0 p-0">
                             Remaining Properties: {{ remainingProperties }}
@@ -89,7 +93,7 @@
                     </span>
                 </strong>
                 <b-nav-item-dropdown
-                    toggle-class="d-flex align-items-center mx-2 text-white"
+                    toggle-class="d-flex align-items-center mx-2 my-2 mt-lg-0 text-white"
                     right
                 >
                     <!-- Using 'button-content' slot -->
@@ -116,6 +120,15 @@
                     <b-dropdown-item href="#">Account</b-dropdown-item>
                     <b-dropdown-item href="#">Sign Out</b-dropdown-item>
                 </b-nav-item-dropdown>
+                <div
+                    class="d-flex align-items-center justify-content-center text-white d-flex d-lg-none my-2"
+                >
+                    <div class="mr-2">
+                        <span class="text-capitalize pr-1">{{ mode }}</span>
+                        Mode
+                    </div>
+                    <ToggleButton :mode="mode" @toggle="$emit('toggle')" />
+                </div>
             </b-navbar-nav>
         </b-collapse>
     </b-navbar>
