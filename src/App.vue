@@ -1,10 +1,12 @@
 <template>
-    <div id="app">
+    <div id="app" :class="mode">
         <NavBar
             :avatar="avatar"
             :userInitials="userInitials"
             :menuItems="menuItems"
             :remainingProperties="remainingProperties"
+            :mode="mode"
+            @toggle="toggle"
         />
         <SecondNavBar :property="property" />
         <b-container class="my-5 px-2 px-md-5 mx-auto max-w-1440px" fluid>
@@ -196,20 +198,53 @@ export default class App extends Vue {
             isTotal: true
         }
     ];
+    private mode: string = localStorage.getItem('themeMode');
+    private mounted() {
+        localStorage.setItem('themeMode', 'light');
+    }
+
+    private toggle() {
+        if (this.mode === 'dark') {
+            this.mode = 'light';
+            localStorage.setItem('themeMode', 'light');
+        } else {
+            this.mode = 'dark';
+            localStorage.setItem('themeMode', 'dark');
+        }
+    }
 }
 </script>
 
 <style lang="scss">
 body {
-    background-color: #fafafa !important;
+    margin: 0;
+    border: 0 none;
+    padding: 0;
 }
+
+html,
+body,
+#app {
+    min-height: 100vh;
+}
+
 #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
+    overflow: hidden !important; /* Firefox scroll-bar */
 }
+
+.light {
+    background-color: #fafafa !important;
+}
+
+.dark {
+    background-color: #11100e !important;
+}
+
 .max-w-1440px {
     max-width: 1440px;
 }

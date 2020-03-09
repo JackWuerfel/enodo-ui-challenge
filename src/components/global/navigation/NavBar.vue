@@ -61,6 +61,15 @@
                         >{{ item.name }}</b-dropdown-item
                     >
                 </b-nav-item-dropdown>
+                <div
+                    class="d-flex align-items-center justify-content-center text-white"
+                >
+                    <div class="mr-2">
+                        <span class="text-capitalize pr-1">{{ mode }}</span>
+                        Mode
+                    </div>
+                    <ToggleButton :mode="mode" @toggle="$emit('toggle')" />
+                </div>
             </b-navbar-nav>
 
             <!-- Right aligned nav items -->
@@ -114,11 +123,19 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import ToggleButton from '../theme/ToggleButton.vue';
 
-@Component
+@Component({
+    components: {
+        ToggleButton
+    }
+})
 export default class NavBar extends Vue {
     @Prop()
     private avatar!: object[];
+
+    @Prop()
+    private mode!: string;
 
     @Prop()
     private remainingProperties!: string;
